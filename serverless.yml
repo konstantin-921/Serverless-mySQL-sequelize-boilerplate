@@ -5,19 +5,30 @@ provider:
   runtime: nodejs8.10
 
 functions:
-  teamsAll:
-    handler: handler.teamsAll
+  usersAll:
+    handler: handler.usersAll
     events:
     - http:
-        path: teams
+        path: users
         method: get
-  createTeam:
-    handler: handler.createTeam
+  createUser:
+    handler: handler.createUser
     events:
     - http:
-        path: teams
+        path: users
         method: post
-
+  deleteUser:
+    handler: handler.deleteById
+    events:
+      - http:
+          path: users
+          method: delete
+  updateUser:
+    handler: handler.updateUser
+    events:
+      - http:
+          path: users
+          method: put
 
 plugins:
   - serverless-offline

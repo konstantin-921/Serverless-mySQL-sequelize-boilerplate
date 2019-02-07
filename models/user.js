@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-  const Team = sequelize.define('Team', {
+  const User = sequelize.define('User', {
     id: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -38,8 +38,8 @@ module.exports = (sequelize, Sequelize) => {
       defaultValue: null,
     }
   }, {
-      tableName: 'Team',
+      tableName: 'User',
       timestamps: true
     })
-  return Team;
+  return User;
 };

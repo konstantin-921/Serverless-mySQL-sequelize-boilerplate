@@ -1,14 +1,18 @@
 'use strict';
-var team = require("./ops/team");
+var user = require("./src/user");
 
-module.exports.teamsAll = (event, context, callback) => {
-  team.getAll(event, context, callback);
+module.exports.usersAll = (event, context, callback) => {
+  user.getAll(event, context, callback);
 };
 
-module.exports.createTeam = (event, context, callback) => {
-  team.create(event, context, callback )
+module.exports.createUser = (event, context, callback) => {
+  user.create(event, context, callback);
 };
 
-module.exports.updateTeam = (event, context, callback) => {
-  team.update(event, context, callback )
-}
+module.exports.deleteById = (event, context, callback) => {
+  user.deleteById(event, context, callback);
+};
+
+module.exports.updateUser = (event, context, callback) => {
+  user.update(event, context, callback);
+};
